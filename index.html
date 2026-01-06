@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Mikrometer Sekrup | Media Pembelajaran SMK</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="judul-utama">
+
+    <h1>Mikrometer Sekrup</h1>
+    <p>Media Pembelajaran Alat Ukur </p>
+    <img src="images/thumnil-mikrometer-sekrup.png" alt="Thumbnail Mikrometer Sekrup" class="gambar-header">
+</header>
+
+<nav>
+    <a href="#pengertian">Pengertian</a>
+    <a href="#bagian">Bagian</a>
+    <a href="#cara">Cara Menggunakan</a>
+    <a href="#membaca">Cara Membaca</a>
+    <a href="#video">Video</a>
+    <a href="#simulasi">Simulasi</a>
+    <a href="#latihan">Latihan</a>
+</nav>
+
+<section id="pengertian" class="bab">
+
+    <h2 class="judul-bab">Pengertian Mikrometer Sekrup</h2>
+
+    <p>
+        Mikrometer sekrup adalah alat ukur presisi yang digunakan untuk mengukur benda kerja yang sangat kecil atau tipis dengan tingkat ketelitian yang sangat tinggi. Alat ini jauh lebih akurat dibandingkan dengan jangka sorong.
+    </p>
+</section>
+
+<section id="bagian" class="card-animasi">
+    <h2 class="judul-bab">Bagian-Bagian Mikrometer Sekrup</h2>
+
+    <div class="bagian-container">
+        <!-- Gambar -->
+        <div class="bagian-gambar">
+            <img src="images/bagian-bagian-mikrometer-sekrup.jpg" alt="Bagian Mikrometer Sekrup">
+        </div>
+
+        <!-- Penjelasan -->
+        <div class="bagian-teks">
+            <ul>
+                <li><b>Frame</b>  
+                    <span>Rangka utama berbentuk huruf C/U dari logam masif, berfungsi menopang seluruh komponen dan menjaga kestabilan alat.</span>
+                </li>
+
+                <li><b>Anvil</b>  
+                    <span>Rahang tetap sebagai titik tumpu benda kerja agar tidak bergeser saat pengukuran.</span>
+                </li>
+
+                <li><b>Spindle</b>  
+                    <span>Rahang gerak yang bergerak maju mundur untuk menjepit benda kerja secara presisi.</span>
+                </li>
+
+                <li><b>Sleeve</b>  
+                    <span>Tabung diam tempat skala utama (mm) untuk membaca nilai dasar pengukuran.</span>
+                </li>
+
+                <li><b>Thimble</b>  
+                    <span>Silinder putar yang menunjukkan skala nonius (desimal) untuk hasil ukur presisi.</span>
+                </li>
+
+                <li><b>Ratchet</b>  
+                    <span>Pengatur tekanan agar penjepitan konsisten dan tidak berlebihan.</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+<section id="cara" class="bab">
+
+    <h2>Cara Menggunakan Mikrometer Sekrup</h2>
+    <ol>
+        <li>Bersihkan benda dan mikrometer</li>
+        <li>Putar thimble hingga spindle terbuka</li>
+        <li>Letakkan benda di antara anvil dan spindle</li>
+        <li>Putar ratchet sampai klik</li>
+        <li>Baca hasil pengukuran</li>
+    </ol>
+</section>
+
+<section id="membaca" class="bab">
+
+    <h2>Cara Membaca Mikrometer Sekrup</h2>
+    <p>
+        Hasil pengukuran diperoleh dari:
+        <br><b>Skala Utama + Skala Putar × 0,01 mm</b>
+    </p>
+</section>
+
+<section id="video">
+    <h2 class="judul-bab">Video Pembelajaran</h2>
+
+    <!-- Pengertian -->
+    <p class="video-desc">
+        Video pembelajaran mikrometer sekrup berfungsi untuk membantu siswa
+        memahami bentuk alat, bagian-bagiannya, serta cara penggunaan dan
+        pembacaan hasil ukur secara visual. Media video membuat pembelajaran
+        lebih menarik dan mudah dipahami oleh siswa SMK.
+    </p>
+
+    <!-- Video -->
+    <div class="video-grid">
+        <iframe src="https://www.youtube.com/embed/p03jojENK1Y" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/oZD85ivHrbs" allowfullscreen></iframe>
+    </div>
+</section>
+
+
+
+<section id="simulasi" class="bab">
+    <h2 class="judul-bab">Simulator Mikrometer Sekrup Presisi</h2>
+    
+    <div class="simulator-wrapper">
+        <div class="svg-container">
+            <svg viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="metalGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:#d1d1d1" />
+                        <stop offset="50%" style="stop-color:#ffffff" />
+                        <stop offset="100%" style="stop-color:#a8a8a8" />
+                    </linearGradient>
+                    <clipPath id="thimbleClip">
+                        <rect x="0" y="0" width="70" height="90" />
+                    </clipPath>
+                </defs>
+
+                <path d="M 80,80 L 80,180 Q 80,220 120,220 L 280,220 Q 320,220 320,180 L 320,80" 
+                      fill="none" stroke="#0d47a1" stroke-width="45" />
+                <text x="145" y="215" fill="white" font-size="12" font-family="Arial" font-weight="bold">0 - 25 mm | 0.01 mm</text>
+
+                <rect x="80" y="110" width="25" height="40" fill="#546e7a" />
+
+                <rect x="320" y="105" width="220" height="50" fill="url(#metalGrad)" stroke="#777" />
+                <line x1="320" y1="130" x2="540" y2="130" stroke="#000" stroke-width="1.2" />
+                <g id="sleeveScaleContainer"></g>
+
+                <g id="movingPart">
+                    <rect x="105" y="115" width="230" height="30" fill="#cfd8dc" stroke="#90a4ae" />
+                    <path d="M 330,95 L 470,95 Q 485,95 485,110 L 485,150 Q 485,165 470,165 L 330,165 L 320,155 L 320,105 Z" 
+                          fill="url(#metalGrad)" stroke="#666" />
+                    <g transform="translate(320, 85)">
+                        <g clip-path="url(#thimbleClip)" id="thimbleScaleContainer"></g>
+                    </g>
+                    <rect x="485" y="110" width="45" height="40" rx="3" fill="#263238" />
+                </g>
+            </svg>
+        </div>
+
+        <div class="kontrol-panel">
+            <div class="display-box">
+                <span id="angkaHasil">0.00</span> <span class="unit">mm</span>
+            </div>
+            <input type="range" id="micrometerSlider" min="0" max="25" step="0.01" value="0">
+        </div>
+    </div>
+</section>
+
+
+<section id="latihan" class="bab">
+
+    <h2>Latihan Soal</h2>
+
+    <div class="soal">
+        <p>1. Ketelitian mikrometer sekrup adalah...</p>
+        <input type="radio" name="q1" value="0">0,1 mm<br>
+        <input type="radio" name="q1" value="1">0,01 mm<br>
+        <input type="radio" name="q1" value="0">1 mm
+    </div>
+
+    <div class="soal">
+        <p>2. Bagian untuk memberi tekanan konstan adalah...</p>
+        <input type="radio" name="q2" value="1">Ratchet<br>
+        <input type="radio" name="q2" value="0">Frame<br>
+        <input type="radio" name="q2" value="0">Sleeve
+    </div>
+
+    <div class="soal">
+        <p>3. Skala utama terdapat pada bagian...</p>
+        <input type="radio" name="q3" value="1">Sleeve<br>
+        <input type="radio" name="q3" value="0">Thimble<br>
+        <input type="radio" name="q3" value="0">Anvil
+    </div>
+
+    <div class="soal">
+        <p>4. Fungsi spindle adalah...</p>
+        <input type="radio" name="q4" value="1">Rahang gerak<br>
+        <input type="radio" name="q4" value="0">Rahang tetap<br>
+        <input type="radio" name="q4" value="0">Rangka
+    </div>
+
+    <div class="soal">
+        <p>5. Mikrometer digunakan untuk mengukur...</p>
+        <input type="radio" name="q5" value="1">Benda kecil presisi<br>
+        <input type="radio" name="q5" value="0">Panjang meja<br>
+        <input type="radio" name="q5" value="0">Berat benda
+    </div>
+
+    <button onclick="cekNilai()">Lihat Skor</button>
+    <h3 id="skor"></h3>
+</section>
+
+<footer>
+    <p>FADLY ANGGA MAULANA 2024006003</p>
+</footer>
+
+<script src="tambah.js"></script>
+</body>
+</html>

@@ -1,0 +1,702 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb, #90caf9);
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(135deg, #1e88e5, #1565c0);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background: #1565c0;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px;
+    margin: 15px auto;
+    background: white;
+    border-radius: 8px;
+    max-width: 1200px;
+}
+
+img {
+    max-width: 100%;
+}
+
+iframe {
+    width: 100%;
+    height: 315px;
+    margin-top: 10px;
+}
+
+button {
+    background: #1e88e5;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0d47a1;
+}
+
+footer {
+    background: #1e88e5;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* ===== ANIMASI TAMBAHAN (LANGKAH 1) ===== */
+
+* {
+    transition: all 0.3s ease;
+}
+
+section {
+    animation: fadeIn 1s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+nav a:hover {
+    background-color: #0d47a1;
+    border-radius: 6px;
+    padding: 6px 10px;
+}
+
+.soal:hover {
+    background-color: #e3f2fd;
+}
+
+
+    /* ===== LANGKAH 3: ANIMASI LATIHAN SOAL ===== */
+
+.soal {
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.soal:hover {
+    background-color: #e3f2fd;
+}
+
+.soal input[type="radio"] {
+    transform: scale(1.1);
+    margin-right: 5px;
+}
+
+.soal input[type="radio"]:checked {
+    accent-color: #1e88e5;
+}
+
+.soal p {
+    font-weight: bold;
+    color: #0d47a1;
+}
+
+section h2 {
+    background: linear-gradient(135deg, #1e88e5, #1565c0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: #1e88e5; /* fallback */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* ===== KEYFRAME ANIMATIONS ===== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Apply animations to sections with delays */
+
+header {
+    animation: slideInLeft 1s ease;
+}
+
+nav {
+    animation: slideInRight 1s ease 0.5s both;
+}
+
+section:nth-child(1) {
+    animation: fadeIn 1s ease 1s both;
+}
+
+section:nth-child(2) {
+    animation: slideInLeft 1s ease 1.5s both;
+}
+
+section:nth-child(3) {
+    animation: slideInRight 1s ease 2s both;
+}
+
+section:nth-child(4) {
+    animation: fadeIn 1s ease 2.5s both;
+}
+
+section:nth-child(5) {
+    animation: slideInLeft 1s ease 3s both;
+}
+
+section:nth-child(6) {
+    animation: slideInRight 1s ease 3.5s both;
+}
+
+section:nth-child(7) {
+    animation: fadeIn 1s ease 4s both;
+}
+
+footer {
+    animation: bounce 2s ease 4.5s both;
+}
+
+/* Animate the image in bagian section */
+
+#bagian img {
+    animation: zoomIn 1.5s ease 2s both;
+}
+
+/* Animate buttons on hover */
+
+button {
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    animation: bounce 0.6s ease;
+}
+
+button.pulse {
+    animation: pulse 0.3s ease;
+}
+
+nav a.pulse {
+    animation: pulse 0.3s ease;
+}
+
+/* ===============================
+   JUDUL UTAMA (HEADER)
+================================ */
+
+.judul-utama {
+    background: linear-gradient(135deg, #1e88e5, #0d47a1);
+    animation: headerGlow 2s infinite alternate;
+}
+
+/* Efek cahaya judul */
+@keyframes headerGlow {
+    from {
+        box-shadow: 0 0 10px rgba(255,255,255,0.3);
+    }
+    to {
+        box-shadow: 0 0 25px rgba(255,255,255,0.7);
+    }
+}
+
+/* ===============================
+   BAB / SECTION
+================================ */
+
+.bab {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+/* Judul BAB */
+.bab h2 {
+    background: linear-gradient(135deg, #1e88e5, #0d47a1);
+    color: white !important;
+    padding: 12px 16px;
+    border-radius: 6px;
+}
+
+/* Efek hover BAB */
+.bab:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(30,136,229,0.4);
+}
+
+/* Efek klik (aktif) */
+.bab.active {
+    animation: klikBab 0.5s ease;
+    border-left: 6px solid #1e88e5;
+}
+
+/* Animasi saat BAB diklik */
+@keyframes klikBab {
+    0% {
+        transform: scale(1);
+        background-color: #ffffff;
+    }
+    50% {
+        transform: scale(1.03);
+        background-color: #e3f2fd;
+    }
+    100% {
+        transform: scale(1);
+        background-color: #ffffff;
+    }
+}
+
+.judul-bab {
+    background: linear-gradient(135deg, #1e88e5, #1565c0);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    animation: slideInLeft 0.8s ease;
+}
+
+/* Animasi saat diklik */
+.judul-bab:active {
+    transform: scale(0.97);
+}
+
+/* ===== VIDEO PEMBELAJARAN ===== */
+
+.video-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.video-text {
+    flex: 1;
+    animation: slideInLeft 1s ease;
+}
+
+.video-text h3 {
+    color: #1565c0;
+    margin-bottom: 10px;
+}
+
+.video-text p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.video-frame {
+    flex: 1;
+    animation: slideInRight 1s ease;
+}
+
+.video-frame iframe {
+    width: 100%;
+    height: 220px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* ===== VIDEO PEMBELAJARAN ===== */
+
+.video-desc {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    animation: fadeIn 1s ease;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.video-grid iframe {
+    width: 100%;
+    height: 260px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    animation: zoomIn 1s ease;
+}
+/* ===== BAGIAN-BAGIAN MIKROMETER ===== */
+
+.card-animasi {
+    animation: fadeIn 1s ease;
+}
+
+.bagian-container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 25px;
+    align-items: center;
+}
+
+/* Gambar */
+.bagian-gambar img {
+    width: 100%;
+    border-radius: 12px;
+    animation: slideInLeft 1.2s ease;
+}
+
+/* Teks */
+.bagian-teks ul {
+    list-style: none;
+    padding: 0;
+}
+
+.bagian-teks li {
+    background: #f1f8ff;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-left: 5px solid #1e88e5;
+    border-radius: 6px;
+    animation: slideInRight 0.8s ease;
+    transition: 0.3s;
+}
+
+.bagian-teks li:hover {
+    transform: translateX(5px);
+    background: #e3f2fd;
+}
+
+.bagian-teks b {
+    display: block;
+    color: #0d47a1;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.bagian-teks span {
+    font-size: 14px;
+    line-height: 1.5;
+}
+/* ===== GAMBAR HEADER (MIKROMETER) ===== */
+
+.gambar-header {
+    width: 400px;          /* 🔥 UBAH ANGKA INI UNTUK MEMBESARKAN */
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    animation: zoomIn 1s ease;
+    transition: transform 0.4s ease;
+}
+
+.gambar-header:hover {
+    transform: scale(1.08);
+}
+/* ===== SIMULATOR REALISTIS ===== */
+
+.simulator-mikrometer {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 30px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.alat-mikrometer {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    animation: zoomIn 1s ease;
+}
+
+.mikrometer-real {
+    width: 100%;
+    max-width: 650px;
+    display: block;
+    margin: auto;
+}
+
+.kontrol-mikrometer {
+    background: #f1f8ff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.hasil-ukur {
+    background: #1e88e5;
+    color: white;
+    font-size: 22px;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* Simulator Styles */
+.simulator-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    background: #f8f9fa;
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid #dee2e6;
+}
+
+.visual-area {
+    position: relative;
+    height: 150px;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.micrometer-body {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Sleeve / Skala Utama */
+.sleeve {
+    width: 300px;
+    height: 60px;
+    background: #bdc3c7;
+    border: 2px solid #7f8c8d;
+    position: relative;
+    border-radius: 5px 0 0 5px;
+    overflow: hidden;
+}
+
+.sleeve-line-center {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #2c3e50;
+}
+
+.sleeve-marks {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.1s;
+}
+
+/* Thimble / Skala Putar */
+.thimble {
+    width: 100px;
+    height: 80px;
+    background: #95a5a6;
+    border: 2px solid #7f8c8d;
+    border-radius: 0 10px 10px 0;
+    position: relative;
+    margin-left: -2px;
+    z-index: 2;
+    overflow: hidden;
+    cursor: grab;
+}
+
+.thimble-marks {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.1s;
+}
+
+/* Garis Skala */
+.mark {
+    position: absolute;
+    background: #2c3e50;
+}
+
+.mark-major { width: 2px; height: 15px; }
+.mark-minor { width: 1px; height: 10px; }
+
+.display-hasil {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 100%;
+    text-align: center;
+}
+
+.hasil-akhir {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1e88e5;
+}
+
+#thimbleSlider {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.simulator-wrapper {
+    background: #ffffff;
+    border: 2px solid #e3f2fd;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.svg-container {
+    width: 100%;
+    background: #fdfdfd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.kontrol-panel {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.display-box {
+    background: #2c3e50;
+    color: #00d2ff;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+}
+
+.display-box .unit {
+    font-size: 16px;
+    color: #fff;
+}
+
+#micrometerSlider {
+    width: 100%;
+    cursor: pointer;
+    height: 10px;
+}
+
+.instruksi {
+    margin-top: 15px;
+    color: #666;
+    font-size: 14px;
+}
+
+.simulator-wrapper {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 850px;
+    margin: 20px auto;
+}
+.svg-container {
+    background: #fdfdfd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.display-box {
+    background: #1e293b;
+    color: #38bdf8;
+    padding: 15px 40px;
+    border-radius: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 2.8rem;
+    font-weight: bold;
+    display: inline-block;
+    border: 2px solid #334155;
+}
+.display-box .unit { font-size: 1rem; color: #94a3b8; }
+#micrometerSlider {
+    width: 80%;
+    margin-top: 20px;
+    cursor: pointer;
+}

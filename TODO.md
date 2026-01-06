@@ -1,0 +1,6 @@
+- [x] Add keyframe animations (fadeIn, slideInLeft, slideInRight, bounce) to style.css
+- [x] Apply animations to sections with delays
+- [x] Add smooth scrolling to nav links
+- [x] Animate the image in bagian section
+- [x] Add subtle animation to header
+- [x] Test the animations
